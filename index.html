@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Portfolio Website</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+               <span class="nav__logo-circle">A</span>
+
+               <span class="nav__logo-name">Adrian Magno</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <span class="nav__title">Menu</span>
+
+               <h3 class="nav__name">Adrian</h3>
+
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">Home</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link">About Me</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#projects" class="nav__link">Projects</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#contact" class="nav__link nav__link-button">Contact Me</a>
+                  </li>
+               </ul>
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <div class="nav__buttons">
+               <!-- Theme button -->
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+               <!-- Toggle button -->
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-4-line"></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+               <h1 class="home__name">
+                  Adrian Magno
+               </h1>
+
+               <div class="home__profile">
+                  <div class="home__image">
+                     <img src="assets/img/adrian.jpg" alt="image" class="home__img">
+                     <div class="home__shadow"></div>
+
+                     <img src="assets/img/curved-arrow.svg" alt="" class="home__arrow">
+                     <img src="assets/img/random-lines.svg" alt="" class="home__line">
+
+                     <div class="geometric-box"></div>
+                  </div>
+
+                  <div class="home__social">
+                     <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+
+                     <a href="https://www.linkedin.com/in/amagno01/" target="_blank" class="home__social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+
+                     <a href="https://github.com/amagno01" target="_blank" class="home__social-link">
+                        <i class="ri-github-line"></i>
+                     </a>
+                  </div>
+               </div>
+
+               <div class="home__info">
+                  <p class="home__description">
+                     <b>Azure Developer</b>, with knowledge in web 
+                     development and design, along with experience
+                     in Java and Python.
+                  </p>
+                  
+                  <a href="#about" class="home__scroll">
+                     <div class="home__scroll-box">
+                        <i class="ri-arrow-down-s-line"></i>
+                     </div>
+                     
+                     <span class="home__scroll-text">Scroll Down</span>
+                  </a>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+            <div class="about__container container grid">
+               <h2 class="section__title-1">
+                  <span>About Me.</span>
+               </h2>
+
+               <div class="about__profile">
+                  <div class="about__image">
+                     <img src="assets/img/military_adrian.jpg" alt="image" class="about__img">
+
+                     <div class="about__shadow"></div>
+
+                     <div class="geometric-box"></div>
+                     <img src="assets/img/random-lines.svg" alt="" class="about__line">
+                     <div class="about__box"></div>
+                  </div>
+               </div>
+
+               <div class="about__info">
+                  <p class="about__description">
+                     I am currently a senior in Bowie State University 
+                     with the major of Computer Technology.
+                  </p>
+
+                  <ul class="about__list">
+                     <li class="about__item">
+                        <b>My Skills Are:</b> HTML, CSS, JavaScript, 
+                        Python React, Git & GitHub,
+                        Azure Development and Azure DevOps
+                     </li>
+                     <li class="about__item">
+                        <b>Certifications:</b> Microsoft Azure Fundamentals
+                        Lean Six Sigma Yellow Belt, Azure Administrator (WIP)
+                     </li>
+                  </ul>
+
+                  <div class="about__buttons">
+                     <a href="#contact" class="button">
+                        <i class="ri-send-plane-line"></i> Contact Me
+                     </a>
+
+                     <a href="https://www.linkedin.com/" target="_blank" class="button__ghost">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== RESUME ====================-->
+         <section class="resume section" id="resume">
+            <h2 class="section__title-2">
+               <span>Resume.</span>
+            </h2>
+
+            <div class="resume__container">
+               <div class="resume__viewer">
+                  <!-- The PDF is now smaller -->
+                  <iframe 
+                        id="resumeIframe" 
+                        src="assets/pdf/Adrian_Magno_Resume.pdf#toolbar=0&zoom=85" 
+                        class="resume__iframe" 
+                        frameborder="0">
+                  </iframe>
+               </div>
+
+               <div class="resume__info">
+                  <h2 class="resume__title">My Resume</h2>
+                  <p class="resume__description">
+                        Download my latest resume to learn more about my skills, experience, and projects.
+                  </p>
+
+                  <div class="resume__buttons">
+                        <a href="assets/pdf/Adrian_Magno_Resume.pdf" target="_blank" class="button">
+                           <i class="ri-eye-line"></i> View Fullscreen
+                        </a>
+                        <a href="assets/pdf/Adrian_Magno_Resume.pdf" download="Adrian_Magno_Resume.pdf" class="button__ghost">
+                           <i class="ri-download-2-line"></i> Download Resume
+                        </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+
+
+
+
+
+
+
+         <!--==================== PROJECTS ====================-->
+         <section class="projects section" id="projects">
+            <h2 class="section__title-1">
+               <span>Projects.</span>
+            </h2>
+
+            <div class="projects__container container grid">
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-1.jpg" alt="image" class="projects__img">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Program</h3>
+                     <h2 class="projects__title">Tic-Tac-Toe</h2>
+
+                     <p class="projects__description">
+                        A Python Tic-Tac-Toe game that allows a user
+                        to play against an AI opponent. The game follows
+                        standard 3x3 Tic-Tac-Toe rules.
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="https://github.com/" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+
+                     <a href="https://dribbble.com/" target="_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i> View
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-2.jpg" alt="image" class="projects__img">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Program</h3>
+                     <h2 class="projects__title">Metric Converter</h2>
+
+                     <p class="projects__description">
+                        A metric conversion tool that allows users to convert
+                        between common measurement units.
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="https://github.com/" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+
+                     <a href="https://dribbble.com/" target="_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i> View
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-3.jpg" alt="image" class="projects__img">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Network Security</h3>
+                     <h2 class="projects__title">Reverse Proxy Server</h2>
+
+                     <p class="projects__description">
+                        Reverse Proxy Server using Fedora 40. Uses NGINX that
+                        forwards client requests to an Apache backend.
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="https://github.com/" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+
+                     <a href="https://dribbble.com/" target="_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i> View
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-1.jpg" alt="image" class="projects__img">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Cyber Sec & ML</h3>
+                     <h2 class="projects__title">Ransomware Detection</h2>
+
+                     <p class="projects__description">
+                        This research project explores the detection of Ransomware
+                        using Random Forest and machine learning algorithms, evaluating
+                        their accuracy and effectiveness.
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="https://github.com/" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+
+                     <a href="https://dribbble.com/" target="_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i> View
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-2.jpg" alt="image" class="projects__img">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Research Project</h3>
+                     <h2 class="projects__title">Zero Trust Architecture</h2>
+
+                     <p class="projects__description">
+                        This project explores applying Zero Trust Architecture in
+                        containerized environments to enhance security through
+                        micro-segmentation, access control, and encryption.
+                     </p>
+                  </div>
+                  
+
+                  <div class="projects__buttons">
+                     <a href="https://github.com/" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+
+                     <a href="https://dribbble.com/" target="_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i> View
+                     </a>
+                  </div>
+               </article>
+
+               <div class="qr-code-container">
+                  <h3>Scan to Open</h3>
+                  <img src="assets/img/frame.png" alt="QR Code" class="qr-code">
+                  <p class="scan-text">Scan Me to view my Portfolio and Resume!</p>
+               </div>
+         
+            </div>
+         </section>
+
+         <!--==================== CONTACT ====================-->
+         <section class="contact section" id="contact">
+            <div class="contact__container grid">
+               <div class="contact__data">
+                  <h2 class="section__title-2">
+                     <span>Contact Me.</span>
+                  </h2>
+
+                  <p class="contact__description-1">
+                     Please don't hesitate to contact
+                     me if you have any questions!
+                  </p>
+
+                  <p class="contact__description-2">
+                     I will need your <b>Name</b> and <b>Email Address</b>, please
+                     leave any suggestions as well.
+                  </p>
+
+                  <div class="geometric-box"></div>
+               </div>
+
+               <div class="contact__mail">
+                  <h2 class="contact__title">
+                     Send Me A Message 
+                  </h2>
+
+                  <form action="" class="contact__form" id="contact-form">
+                     <div class="contact__group">
+                        <div class="contact__box">
+                           <input type="text" name="user_name" class="contact__input" id="name" required placeholder="First Name">
+                           <label for="name" class="contact__label">First Name</label>
+                        </div>
+   
+                        <div class="contact__box">
+                           <input type="email" name="user_email" class="contact__input" id="email" required placeholder="Email Address">
+                           <label for="email" class="contact__label">Email Address</label>
+                        </div>
+                     </div>
+                     
+                     <div class="contact__box">
+                        <input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="Subject">
+                        <label for="subject" class="contact__label">Subject</label>
+                     </div>
+
+                     <div class="contact__box contact__area">
+                        <textarea name="user_message" class="contact__input" id="message" required placeholder="Message"></textarea>
+                        <label for="message" class="contact__label">Message</label>
+                     </div>
+
+                     <p class="contact__message" id="contact-message"></p>
+
+                     <button type="submit" class="contact__button button">
+                        <i class="ri-send-plane-line"></i> Send Message
+                     </button>
+                  </form>
+               </div>
+
+               <div class="contact__social">
+                  <img src="assets/img/curved-arrow.svg" alt="" class="contact__social-arrow">
+
+                  <div class="contact__social-data">
+                     <div>
+                        <p class="contact__social-description-1">
+                           Does not send emails
+                        </p>
+   
+                        <p class="contact__social-description-2">
+                           Reach out to me on my social networks!
+                        </p>
+                     </div>
+
+                     <div class="contact__social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100005645658379" class="contact__social-link" target="_blank">
+                           <i class="ri-facebook-circle-line"></i>
+                        </a>
+   
+                        <a href="https://www.instagram.com/" class="contact__social-link" target="_blank">
+                           <i class="ri-instagram-line"></i>
+                        </a>
+   
+                        <a href="https://www.linkedin.com/in/amagno01/" class="contact__social-link" target="_blank">
+                           <i class="ri-linkedin-box-line"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <ul class="footer__links">
+               <li>
+                  <a href="#home" class="footer__link">Home</a>
+               </li>
+
+               <li>
+                  <a href="#about" class="footer__link">About</a>
+               </li>
+
+               <li>
+                  <a href="#projects" class="footer__link">Projects</a>
+               </li>
+            </ul>
+
+            <span class="footer__copy">
+               &#169; All Rights Reserved By 
+               <a href="#">Adrian</a>
+            </span>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-s-line"></i>
+      </a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="assets/js/scrollreveal.min.js"></script>
+      
+      <!--=============== EMAIL JS ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
+
