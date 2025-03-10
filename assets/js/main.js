@@ -40,32 +40,30 @@ window.addEventListener('scroll', shadowHeader)
 
 /*=============== EMAIL JS ===============*/
 const contactForm = document.getElementById('contact-form'),
-    contactMessage = document.getElementById('contact-message')
+    contactMessage = document.getElementById('contact-message');
 
-const sendEmail = (e) =>{
-e.preventDefault()
+const sendEmail = (e) => {
+    e.preventDefault(); // Prevent default form submission
 
-   // serviceID - templateID - #form - publicKey
-emailjs.sendForm('','','#contact-form','')
-    .then(() =>{
-         // Show sent message
-        contactMessage.textContent = 'Message sent successfully ✅'
+    emailjs.sendForm('service_m5cw7og', 'template_m12irm9', '#contact-form', 'uwT9GRr4xDwJLj7tr')
+        .then(() => {
+            contactMessage.textContent = "Message sent successfully ✅";
+            contactMessage.style.color = "green";
 
-         // Remove message after five seconds
-        setTimeout(() =>{
-            contactMessage.textContent = ''
-        }, 5000)
+            setTimeout(() => {
+                contactMessage.textContent = '';
+            }, 5000);
 
-         // Clear input fields
-        contactForm.reset()
+            contactForm.reset(); // Clear input fields
 
-    }, () =>{
-         // Show error message
-        contactMessage.textContent = 'Message not sent (service error) ❌'
-    })
+        }).catch((error) => {
+            contactMessage.textContent = "Message not sent ❌ (Service Error)";
+            contactMessage.style.color = "red";
+            console.error("EmailJS Error:", error);
+        });
 }
 
-contactForm.addEventListener('submit', sendEmail)
+contactForm.addEventListener('submit', sendEmail);
 
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{
