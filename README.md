@@ -1,4 +1,4 @@
-# 🚀 **Adrian Magno's Portfolio Website**
+# 🚀 **Portfolio Website**
 
 Welcome to my **Personal Portfolio Website**! This is a fully **responsive** and **interactive** website designed to showcase my skills, projects, and professional experience.
 
@@ -54,23 +54,16 @@ This website is built using **modern web technologies**:
 
 ## 📱 **QR Code for Easy Access**
 Scan the QR code below to open this portfolio on your phone:  
-![QR Code](assets/img/qr-code.png)
+![QR Code](assets/img/qrcode.png)
 
 ---
 
 ## 📬 **Contact Me**
 📧 **Email:** [adrian01magno@gmail.com](mailto:adrian01magno@gmail.com)  
 💼 **LinkedIn:** [linkedin.com/in/amagno01](https://www.linkedin.com/in/amagno01)  
-📂 **GitHub:** [github.com/your-username](https://github.com/your-username)
+📂 **GitHub:** [github.com/your-username](https://github.com/amagno01)
 
 ---
 
-### 🎯 **Future Enhancements**
-- 🛒 **E-Commerce Integration** – Add a shop for freelance services.
-- 🏆 **Certifications Page** – Display professional certifications.
-- 📝 **Blog Section** – Share knowledge and experiences.
-- 📊 **Analytics Dashboard** – Track website performance and user interactions.
-
----
 
 ### 🚀 **Inspired design by Bedimcode**
