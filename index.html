@@ -501,6 +501,26 @@
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
+
+      <!-- Chatbot Container -->
+      <div id="chatbot-container">
+         <!-- Chatbot Header (Click to Open/Close) -->
+         <div id="chatbot-header">
+            <span>Chat with me!</span>
+            <i class="ri-chat-3-line"></i>
+         </div>
+
+         <!-- Chatbot Box (Hidden by Default) -->
+         <div id="chatbot-box" style="display: none;">
+            <div id="chatbot-messages"></div>
+
+            <!-- Input Field & Send Button -->
+            <div class="chatbot-input-container">
+               <input type="text" id="chatbot-input" placeholder="Type a message..." />
+               <button id="chatbot-send">Send</button>
+            </div>
+         </div>
+      </div>
    </body>
 </html>
 

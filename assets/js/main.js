@@ -144,9 +144,108 @@ sr.reveal(`.services__card, .projects__card`, {interval: 100})
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    let iframe = document.getElementById("resumeIframe");
-    iframe.src = iframe.src + "#view=FitH"; // Ensures the PDF loads correctly
+    let chatbotHeader = document.getElementById("chatbot-header");
+    let chatbotBox = document.getElementById("chatbot-box");
+    let chatbotMessages = document.getElementById("chatbot-messages");
+    let inputField = document.getElementById("chatbot-input");
+    let sendButton = document.getElementById("chatbot-send");
+
+    // Chatbot Toggle Function
+    chatbotHeader.addEventListener("click", function () {
+        chatbotBox.style.display = chatbotBox.style.display === "block" ? "none" : "block";
+    });
+
+    // Chatbot Response Function
+    function getChatbotResponse(userMessage) {
+        let lowerCaseMessage = userMessage.toLowerCase();
+
+        // Responses based on keywords
+        if (lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi")) {
+            return "Hi there! I'm Adrian's chatbot. How can I assist you today?";
+        } 
+        else if (lowerCaseMessage.includes("how are you")) {
+            return "I'm great! Thanks for asking. How about you?";
+        } 
+        else if (lowerCaseMessage.includes("your name")) {
+            return "I'm Adrian's chatbot, built to assist with portfolio questions!";
+        } 
+        else if (lowerCaseMessage.includes("who is adrian")) {
+            return "Adrian Magno is an Azure Developer with experience in web development, Java, Python, and cybersecurity!";
+        }
+        else if (lowerCaseMessage.includes("education")) {
+            return "Adrian is currently pursuing a Bachelor's degree in Computer Technology - Network Enterprise Infrastructure at Bowie State University. He also holds an Associate’s degree from Prince George’s Community College.";
+        }
+        else if (lowerCaseMessage.includes("experience")) {
+            return "Adrian has experience as a Jr. Software Developer at Cognosante MVH, a Jr. Associate Developer at Kurrent Logic LLC, and as a Cargo Specialist in the U.S. Army Reserves.";
+        }
+        else if (lowerCaseMessage.includes("skills")) {
+            return "Adrian's skillset includes Python, Java, JavaScript, React.js, FastAPI, Azure Cloud Services, Git, and DevOps tools.";
+        }
+        else if (lowerCaseMessage.includes("projects")) {
+            return "Adrian has worked on projects such as Tic-Tac-Toe AI, Metric Converter, Reverse Proxy Server using Fedora 40, and Ransomware Detection using Machine Learning. You can check them out in the projects section!";
+        }
+        else if (lowerCaseMessage.includes("resume")) {
+            return "You can view or download Adrian's resume by visiting the Resume section on this website.";
+        }
+        else if (lowerCaseMessage.includes("certifications")) {
+            return "Adrian holds certifications in Microsoft Azure Fundamentals and Lean Six Sigma Yellow Belt, and is currently working on the Azure Administrator certification.";
+        }
+        else if (lowerCaseMessage.includes("contact")) {
+            return "You can contact Adrian through the Contact section of this website. Feel free to leave a message!";
+        }
+        else if (lowerCaseMessage.includes("bye")) {
+            return "Goodbye! Have a great day!";
+        }
+        else if (lowerCaseMessage.includes("time")) {
+            let currentTime = new Date().toLocaleTimeString();
+            return `The current time is ${currentTime}.`;
+        }
+        else {
+            return "I'm not sure I understand. Can you try rephrasing your question?";
+        }
+    }
+
+    // Send Chat Message Function
+    function sendChatMessage() {
+        let userMessage = inputField.value.trim();
+        if (userMessage === "") return; // Prevent sending empty messages
+
+        // Append user message
+        let userMessageElement = document.createElement("p");
+        userMessageElement.innerHTML = `<strong>You:</strong> ${userMessage}`;
+        chatbotMessages.appendChild(userMessageElement);
+
+        // Clear input field
+        inputField.value = "";
+
+        // Auto-scroll to latest message
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+        // Simulate chatbot response
+        setTimeout(() => {
+            let botReply = getChatbotResponse(userMessage);
+
+            let botMessageElement = document.createElement("p");
+            botMessageElement.innerHTML = `<strong>Bot:</strong> ${botReply}`;
+            chatbotMessages.appendChild(botMessageElement);
+
+            // Auto-scroll after bot response
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }, 500);
+    }
+
+    // Event listener for "Send" button click
+    sendButton.addEventListener("click", sendChatMessage);
+
+    // Event listener for "Enter" key in the input field
+    inputField.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); // Prevents new line
+            sendChatMessage();
+        }
+    });
 });
+
 
 
 

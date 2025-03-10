@@ -1473,3 +1473,94 @@ body.dark-theme {
   margin-top: 10px;
   color: #000;
 }
+
+/* Chatbot Floating UI */
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Keep on the left */
+  right: auto;
+  width: 320px;
+  z-index: 9999;
+  background: black; /* Black background */
+  color: white; /* White text */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Soft black shadow */
+  transition: transform 0.3s ease-in-out;
+}
+
+#chatbot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black; /* Black header */
+  color: white; /* White text */
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+#chatbot-box {
+  display: none; /* Initially hidden */
+  padding: 10px;
+}
+
+#chatbot-messages {
+  height: 250px;
+  overflow-y: auto;
+  background: white; /* White background */
+  color: black; /* Black text */
+  padding: 10px;
+  border-bottom: 1px solid black; /* Black separator */
+}
+
+#chatbot-input {
+  width: 75%;
+  padding: 8px;
+  background: white; /* White background */
+  color: black; /* Black text */
+  border: 1px solid black; /* Black border */
+  border-radius: 5px;
+}
+
+#chatbot-send {
+  background: black; /* Black button */
+  color: white; /* White text */
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+#chatbot-send:hover {
+  background: white; /* White on hover */
+  color: black; /* Black text */
+  border: 1px solid black; /* Black border */
+}
+
+#chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Keep aligned */
+  background: black; /* Black button */
+  color: white; /* White text */
+  border: 1px solid white; /* White border */
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#chatbot-button:hover {
+  background: white; /* White on hover */
+  color: black; /* Black text */
+}
+
+/* Floating Animation */
+#chatbot-container.floating {
+  transform: translateY(-10px);
+}
