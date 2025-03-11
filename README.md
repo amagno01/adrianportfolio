@@ -44,7 +44,7 @@ This website is built using **modern web technologies**:
 ### 🔹 **Run Locally**
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/amagno01/adrianportfolio.git
    cd portfolio
    ```
 2. **Open `index.html`** in your browser or use **VS Code Live Server**.
